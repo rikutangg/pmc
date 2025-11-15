@@ -1,0 +1,384 @@
+/* ======================
+   BASE LAYOUT
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+#halaman {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.foto {
+    width: 60px;
+    margin-right: auto;
+}
+
+/* Menu item */
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    padding: 12px 18px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+/* Tombol daftar */
+.daftar {
+    background: rgb(6, 103, 248);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* Dropdown */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background: white;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li a {
+    display: block;
+    padding: 12px;
+}
+
+/* ======================
+   BAGIAN 1 (HEADER + FOTO)
+====================== */
+.tampilan {
+    padding: 20px;
+}
+
+.p1 {
+    display: inline-block;
+    background: rgb(197, 220, 231);
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.judul1 {
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.p2 {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.foto2 {
+    width: 100%;
+    max-width: 450px;
+    float: right;
+    margin-top: 20px;
+}
+
+/* ======================
+   FOTO-FOTO PLUS TOMBOL
+====================== */
+
+.fotofoto {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.foto3, .foto4 {
+    width: 40%;
+    max-width: 230px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    cursor: zoom-in;
+    transition: .3s;
+}
+
+.foto3.aktif,
+.foto4.klik {
+    transform: scale(2);
+}
+
+.daftar1 {
+    background: rgb(6,103,248);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+    display: inline-block;
+    box-shadow: 0px 0px 0px 0px;
+    border: none;
+}
+.daftar1 a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    box-shadow: none;
+}
+
+.p3 a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ======================
+   BAGIAN VIDEO
+====================== */
+
+.kotak2 {
+    background: rgb(204,218,236);
+    padding: 40px 20px;
+}
+
+.topik {
+    text-align: center;
+    font-size: 32px;
+}
+
+.p4 {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.vidio {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
+
+/* ======================
+   KOTAK WA
+====================== */
+
+.kotak3 {
+    width: 80%;
+    margin: 40px auto;
+    background: rgb(2,81,252);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.p5 {
+    font-size: 22px;
+    color: white;
+}
+
+.p6 {
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+}
+
+.demo {
+    background: rgb(255,178,36);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.demo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* ======================
+   TAMPILAN2
+====================== */
+
+.tampilan2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.fotomenu {
+    width: 100%;
+    max-width: 350px;
+}
+
+.paragrap {
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.p7 {
+    font-size: 20px;
+    width: 90%;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+/* ======================
+   PENJELASAN (GRID)
+====================== */
+
+.penjelasan {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.penjelasan img {
+    width: 80px;
+    margin: auto;
+}
+
+.penjelasan p {
+    font-size: 16px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.penjelasan h4 {
+    font-size: 20px;
+}
+
+/* ======================
+   BAGIAN TERAKHIR
+====================== */
+
+.tampilan3 {
+    margin-top: 50px;
+    background: rgb(105, 105, 105);
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+/* ======================
+   RESPONSIVE HP PORTRAIT
+====================== */
+
+@media (max-width: 600px) {
+
+    .judul1 {
+        font-size: 30px;
+    }
+
+    .p1 {
+        font-size: 18px;
+    }
+
+    .p2 {
+        font-size: 18px;
+    }
+
+    .topik {
+        font-size: 22px;
+    }
+
+    .paragrap {
+        font-size: 24px;
+    }
+
+    .p7 {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    nav ul ul {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+}
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0080ff;
+        width: 60%;
+        padding: 15px 0;
+        display: none;
+        border-radius: 0 0 0 10px;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        position: static;
+        display: block;
+        border-radius: 0;
+    }
+
+    .dropdown-menu li a {
+        padding-left: 40px;
+    }
+}
